@@ -4,10 +4,10 @@ import { CarouselStyle, Right, Wrapper } from "./styles";
 import ThumbMagyar from "../ThumbMagyar";
 
 function CarouselMagyar({ videos }) {
-  const [moveRight, setMoveRight] = useState(false);
+  const [moveRight, setMoveRight] = useState(0);
 
   function actionRight() {
-    setMoveRight(true);
+    setMoveRight((oldMoveRight) => oldMoveRight + 1);
   }
 
   return (
