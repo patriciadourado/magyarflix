@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { WrapperThumb, Background } from "../ThumbMagyar/styles";
 import arrow from "../../assets/img/arrow.svg";
 
@@ -30,8 +30,24 @@ export const Right = styled.button`
   }
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  transition: transform 200ms linear;
+
+  & > ${Background} {
+    margin-right: 20rem;
+  }
+
+  ${({ moveRight }) =>
+    moveRight &&
+    css`
+      transform: translateX(calc(var(--thumb-width) * -1));
+    `}
+`;
+
 export const CarouselStyle = styled.div`
   --space-top-bottom: 20rem;
+  --thumb-width: 400px;
   position: relative;
   display: flex;
   align-items: center;
@@ -41,12 +57,8 @@ export const CarouselStyle = styled.div`
   padding: var(--space-top-bottom) 30rem;
   overflow: hidden;
 
-  & > ${Background} {
-    margin-right: 20rem;
-  }
-
   & ${WrapperThumb} {
-    width: 400px;
+    var(--thumb-width); 
   }
 
   &:hover > ${Right} {

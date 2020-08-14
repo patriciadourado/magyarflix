@@ -5,7 +5,7 @@ export const Timer = styled.span`
   position: absolute;
   right: var(--space);
   bottom: var(--space);
-  font-size: 18rem;
+  font-size: 1.5vw;
   color: var(--color-gray-light);
   background-color: var(--color-black-medium);
   padding: 2rem 4rem;
@@ -17,7 +17,7 @@ export const Title = styled.figcaption`
   position: absolute;
   left: var(--space);
   bottom: var(--space);
-  font-size: 25rem;
+  font-size: 1.5vw;
   color: var(--color-gray-light);
   font-weight: 300;
   background-color: var(--color-black-medium);
@@ -59,7 +59,13 @@ export const Background = styled.div`
 
   margin-right: 5%;
   position: relative;
+
   background-color: var(--color-magyar);
+  width: 100%;
+
+  @media (max-width: 800px){
+    display: none;
+  }
 
   &::before,
   &::after {

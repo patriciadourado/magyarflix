@@ -31,7 +31,7 @@ const ButtonMagyar = styled.button`
   &::after {
     content: '${({ children }) => children}';
     position: absolute;
-  }
+  } 
 
   &:hover::before {     
     transform: translateX(-30%) scaleX(1.5) skew(-30deg);
