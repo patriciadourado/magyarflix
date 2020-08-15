@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { CarouselStyle, Right, Wrapper } from "./styles";
+import { CarouselStyle, Right, Wrapper, Left } from "./styles";
 import ThumbMagyar from "../ThumbMagyar";
 
 function CarouselMagyar({ videos }) {
-  const [moveRight, setMoveRight] = useState(0);
+  const [move, setMove] = useState(0);
 
   function actionRight() {
-    setMoveRight((oldMoveRight) => oldMoveRight + 1);
+    setMove((oldMove) => oldMove - 1);
+  }
+
+  function actionLeft(){
+    setMove((oldMove) => oldMove + 1);
   }
 
   return (
     <CarouselStyle>
-      <Wrapper moveRight={moveRight}>
+      <Left onClick={actionLeft} />
+      <Wrapper move={move}>
         {videos.map(({ src, alt, avatar, title, channelName, timer, link }) => (
           <ThumbMagyar
             src={src}
