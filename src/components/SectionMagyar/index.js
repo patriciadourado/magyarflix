@@ -10,7 +10,7 @@ const SectionMagyar = styled.section`
 
   & > ${TagMagyar} {
     margin-bottom: 40rem;
-    margin-top: 40rem;
+    margin-top: 50rem;
     font-size: 30rem;
   }
 
@@ -22,7 +22,7 @@ const SectionMagyar = styled.section`
   & > ${DescriptionMagyar} {
     width: 600px;
     max-width: 820;
-    margin: 0 auto 40rem;
+    margin: 0 auto 10rem;
   }
 `;
 
