@@ -13,14 +13,32 @@ export const Text = styled.div`
   ${TitleMagyar} {
     margin-bottom: 20rem;
   }
+`;
 
-  @media (max-width: 800px) {
+export const Watch = styled.button`
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 6rem 11rem;
+  margin-top: 1rem;
+  background-color: var(--color-gray-light);
+  color: var(--color-black-dark);
+  border: 1px solid var(--color-gray-light);
+  border-radius: 4px;
+  font-size: 15rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-black);
+    font-style: bold;
   }
 `;
 
 export const BannerMagyar = styled.section`
   ${container};
-  display: flex;
+  display: contents;
   justify-content: space-between;
   align-items: center;
   max-height: 80vh;
@@ -33,6 +51,7 @@ export const BannerMagyar = styled.section`
     min-height: 50vh;
 
     & ${WrapperThumb} {
+      display: none;
       width: 54vw;
 
       & ${Avatar} {
@@ -78,18 +97,33 @@ export const WrapperBanner = styled.section`
   background-position: center;
 
   @media (max-width: 800px) {
-    background-image: none;
     flex-direction: column;
     height: auto;
     min-height: 50vh;
-    justify-content: center;
+    justify-content: flex-end;
 
     & ${TitleMagyar} {
+      visibility: hidden;
+    }
+
+    & ${TitleMagyar}:after {
+      content: "Budapest: The Best of Hungary";
+      letter-spacing: 1rem;
+      font-family: "Roboto";
+      text-transform: uppercase;
+      visibility: visible;
+      /* position: absolute; */
+      display: block;
       text-align: center;
-      margin-top: 50rem;
+      font-size: 20rem;
+    }
+
+    & ${Watch} {
+      display: flex;
     }
 
     & ${DescriptionMagyar} {
+      display: none;
       text-align: justify;
       margin-bottom: 20rem;
       font-size: 2vw;

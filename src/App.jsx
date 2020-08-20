@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderOpen from "./components/HeaderOpen";
-import { WrapperBanner, BannerMagyar, Text } from "./components/BannerMagyar";
+import { WrapperBanner, BannerMagyar, Text, Watch } from "./components/BannerMagyar";
 import TagMagyar from "./components/TagMagyar";
 import TitleMagyar from "./components/TitleMagyar";
 import DescriptionMagyar from "./components/DescriptionMagyar";
@@ -139,6 +139,7 @@ function App() {
               tongue the devil respects.&quot;
             </DescriptionMagyar>
           </Text>
+          <Watch>Assistir</Watch>
           <ThumbMagyar
             src={bestOf}
             alt="Thumb of Steve"
