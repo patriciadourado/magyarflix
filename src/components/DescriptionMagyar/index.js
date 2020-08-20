@@ -9,7 +9,7 @@ const DescriptionMagyar = styled.p`
   text-justify: center;
 
   @media (max-width: 800px){
-    display: none;
+    /* display: none; */
   }
 `;
 

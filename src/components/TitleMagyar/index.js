@@ -5,7 +5,7 @@ const TitleMagyar = styled.h1`
   color: var(--color-gray-light);
 
   @media (max-width: 800px){
-    font-size: 40rem;
+    /* font-size: 40rem; */
   }
 `;
 

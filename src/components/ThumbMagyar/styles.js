@@ -61,10 +61,16 @@ export const Background = styled.div`
   position: relative;
 
   background-color: var(--color-magyar);
-  width: 100%;
 
-  @media (max-width: 800px){
-    display: none;
+  @media (max-width: 800px) {
+    margin-bottom: 15rem;
+    margin-right: 0;
+    /* display: none; */
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 10rem;
+    /* display: none; */
   }
 
   &::before,
