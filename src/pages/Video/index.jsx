@@ -2,7 +2,7 @@ import React from "react";
 import TagMagyar from "../../components/TagMagyar";
 
 function Video() {
-  return <TagMagyar>Video Novo</TagMagyar>;
+  return <TagMagyar>Home dos Videos</TagMagyar>;
 }
 
 export default Video;

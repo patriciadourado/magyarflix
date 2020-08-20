@@ -41,10 +41,6 @@ const ButtonMagyar = styled.button`
     transform: scale(2);
   }
 
-  &:hover,&:focus{
-    color: var(--color-black);
-    font-style: bold;
-  }
 `;
 
 export default ButtonMagyar;

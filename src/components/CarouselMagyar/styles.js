@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
-import { WrapperThumb, Background } from "../ThumbMagyar/styles";
+import { WrapperThumb, Background, Timer, Title } from "../ThumbMagyar/styles";
 import arrow from "../../assets/img/arrow.svg";
+import { Avatar, Channel } from "../AvatarMagyar/styles";
 
 const thumbWidth = 400;
 const spaceRight = 20;
@@ -124,4 +125,29 @@ export const CarouselStyle = styled.div`
     transform-origin: right center;
   }
   ${({ move, moveLastRight }) => moveCarousel(move, moveLastRight)}
+
+  @media (max-width: 800px) {
+    & ${WrapperThumb} {
+      /* width: 70vw; */
+      box-sizing: border-box;
+
+      & ${Title}, & ${Timer} {
+        font-size: 4vw;
+      }
+
+      & ${Avatar} {
+        width: 8vw;
+        height: 8vw;
+      }
+
+      & ${Channel} {
+        font-size: 4vw;
+      }
+
+    }
+
+    & ${Right}, & ${Left} {
+      width: 40rem;
+    }
+  }
 `;

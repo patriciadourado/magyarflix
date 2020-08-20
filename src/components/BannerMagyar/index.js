@@ -48,7 +48,7 @@ export const BannerMagyar = styled.section`
 
   @media (max-width: 800px) {
     height: auto;
-    min-height: 50vh;
+    min-height: 80vw;
 
     & ${WrapperThumb} {
       display: none;
@@ -99,7 +99,7 @@ export const WrapperBanner = styled.section`
   @media (max-width: 800px) {
     flex-direction: column;
     height: auto;
-    min-height: 50vh;
+    min-height: 70vw;
     justify-content: flex-end;
 
     & ${TitleMagyar} {
