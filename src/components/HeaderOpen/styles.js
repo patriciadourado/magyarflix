@@ -32,6 +32,7 @@ export const Wrapper = styled.div`
       bottom: 0;
       left: 0;
       width: 100vw;
+      z-index: 2;
     }
   }
 `;

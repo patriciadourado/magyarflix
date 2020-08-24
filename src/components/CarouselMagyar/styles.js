@@ -131,8 +131,12 @@ export const CarouselStyle = styled.div`
       /* width: 70vw; */
       box-sizing: border-box;
 
-      & ${Title}, & ${Timer} {
-        font-size: 4vw;
+      & ${Title} {
+        font-size: 3vw;
+      }
+
+      & ${Timer} {
+        font-size: 2.5vw;
       }
 
       & ${Avatar} {
