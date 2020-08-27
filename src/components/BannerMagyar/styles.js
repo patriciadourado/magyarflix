@@ -19,6 +19,7 @@ export const WrapperVideo = styled.section`
   height: 80vh;
   position: relative;
   display: none;
+  margin-top: 70rem;
 
   @media (max-width: 800px) {
     display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
@@ -88,8 +89,10 @@ export const WrapperBanner = styled.section`
   background-size: cover;
   background-position: center;
   display: flex;
+  margin-top: 90rem;
 
   @media (max-width: 800px) {
+    margin-top: 70rem;
     display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
     flex-direction: column;
     height: auto;

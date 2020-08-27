@@ -6,6 +6,9 @@ export const HeaderMagyar = styled.header`
   background-color: var(--color-black-dark);
   border-bottom: 4px solid var(--color-primary-medium);
   padding: 20rem 30rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
   @media (max-width: 800px) {
     padding: 15rem 16rem;
@@ -33,10 +36,6 @@ export const Wrapper = styled.div`
       left: 0;
       width: 100vw;
       z-index: 2;
-    }
-
-    & > ${ButtonMagyar}::after {
-      content: ''; 
     }
   }
 `;

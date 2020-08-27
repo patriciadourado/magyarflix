@@ -22,7 +22,6 @@ const ButtonMagyar = styled.button`
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, #fb0404, #e1d8ff, #009b14);
-    /* background-color: var(--color-primary-medium); */
     transform-origin: bottom left;
     transform: translateX(100%) scaleX(1.5) skew(-30deg);
     transition: transform 200ms linear;
@@ -40,10 +39,6 @@ const ButtonMagyar = styled.button`
   &:active::after{
     transform: scale(2);
   }
-
-  /* @media(max-width: 800px){
-    padding-top: 5px;
-  } */
 `;
 
 export default ButtonMagyar;

@@ -12,11 +12,12 @@ const FooterMagyar = styled.footer`
   border-top: 4px solid var(--color-primary-medium);
 
   & > ${LogoFlix} {
-    margin-bottom: 20rem;
+    margin-bottom: 10rem;
   }
 
   @media (max-width: 800px) {
-    padding: 5rem 0;
+    padding: 10rem 0 15rem;
+    margin-bottom: 50rem;
   }
 `;
 
