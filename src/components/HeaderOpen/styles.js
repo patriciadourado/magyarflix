@@ -34,5 +34,9 @@ export const Wrapper = styled.div`
       width: 100vw;
       z-index: 2;
     }
+
+    & > ${ButtonMagyar}::after {
+      content: ''; 
+    }
   }
 `;

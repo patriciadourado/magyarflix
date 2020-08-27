@@ -4,6 +4,13 @@ import PropTypes from "prop-types";
 import { CarouselStyle, Right, Wrapper, Left } from "./styles";
 import ThumbMagyar from "../ThumbMagyar";
 
+function getYouTubeId(youtubeURL) {
+  return youtubeURL.replace(
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
+    "$7"
+  );
+}
+
 function CarouselMagyar({ videos }) {
   const [move, setMove] = useState(0);
   const [wrapperWidth, setWrapperWidth] = useState(0);
@@ -27,15 +34,16 @@ function CarouselMagyar({ videos }) {
     <CarouselStyle move={move} moveLastRight={wrapperWidth - winWidth}>
       <Left onClick={actionLeft} />
       <Wrapper ref={$wrapper}>
-        {videos.map(({ src, alt, avatar, title, channelName, timer, link }) => (
+        {videos.map(({ src, alt, avatar, title, channelName, link }) => (
           <ThumbMagyar
-            src={src}
-            alt={alt}
+            src={`https://www.youtube.com/embed/${getYouTubeId(link)}?autoplay=0`}
+            alt="Thumb of Steve"
             avatar={avatar}
             title={title}
             channelName={channelName}
-            timer={timer}
-            link={link}
+            // timer="02:20:34"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           />
         ))}
       </Wrapper>

@@ -1,17 +1,35 @@
 import styled from "styled-components";
 import container from "../../styles/tools/container";
 import TitleMagyar from "../TitleMagyar";
-import { WrapperThumb } from "../ThumbMagyar/styles";
-import { Avatar, Channel } from "../AvatarMagyar/styles";
+import { WrapperThumb, Thumb } from "../ThumbMagyar/styles";
 import DescriptionMagyar from "../DescriptionMagyar";
 
 export const Text = styled.div`
-  /* max-width: 45%; */
   margin-left: 5%;
   margin-right: 5%;
 
   ${TitleMagyar} {
     margin-bottom: 20rem;
+  }
+`;
+
+export const WrapperVideo = styled.section`
+  padding-top: 10rem;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+  display: none;
+
+  @media (max-width: 800px) {
+    display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
+    flex-direction: column-reverse;
+    height: auto;
+    min-height: 70vw;
+    justify-content: flex-end;
+  }
+
+  & ${Thumb} {
+    height: 60vw;
   }
 `;
 
@@ -29,22 +47,15 @@ export const Watch = styled.button`
   font-size: 15rem;
   font-weight: bold;
   cursor: pointer;
-
-  &:hover {
-    color: var(--color-black);
-    font-style: bold;
-  }
 `;
 
-export const BannerMagyar = styled.section`
+export const BannerStyle = styled.section`
   ${container};
   display: contents;
   justify-content: space-between;
   align-items: center;
   max-height: 80vh;
   height: 100vh;
-
-  /* position: relative; */
 
   @media (max-width: 800px) {
     height: auto;
@@ -53,35 +64,17 @@ export const BannerMagyar = styled.section`
     & ${WrapperThumb} {
       display: none;
       width: 54vw;
-
-      & ${Avatar} {
-        width: 8vw;
-        height: 8vw;
-      }
-
-      & ${Channel} {
-        font-size: 3vw;
-      }
     }
   }
 
   @media (max-width: 500px) {
     height: auto;
     min-height: 50vh;
-
-    & ${WrapperThumb} {
-      width: 60vw;
-    }
   }
 
   @media (max-width: 375px) {
     height: auto;
     min-height: 50vh;
-    align-items: center;
-
-    & ${WrapperThumb} {
-      width: 65vw;
-    }
   }
 `;
 
@@ -89,14 +82,15 @@ export const WrapperBanner = styled.section`
   padding-top: 10rem;
   align-items: center;
   height: 80vh;
-  display: flex;
   position: relative;
   color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
+  background-image: ${({ bgImg }) => `url(${bgImg})`};
   background-size: cover;
   background-position: center;
+  display: flex;
 
   @media (max-width: 800px) {
+    display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
     flex-direction: column;
     height: auto;
     min-height: 70vw;
@@ -107,12 +101,11 @@ export const WrapperBanner = styled.section`
     }
 
     & ${TitleMagyar}:after {
-      content: "Budapest: The Best of Hungary";
+      content: ${({ title }) => `"${title}"`};
       letter-spacing: 1rem;
       font-family: "Roboto";
       text-transform: uppercase;
       visibility: visible;
-      /* position: absolute; */
       display: block;
       text-align: center;
       font-size: 20rem;

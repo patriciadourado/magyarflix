@@ -27,8 +27,9 @@ export const Title = styled.figcaption`
   transition: transform 200ms linear, opacity 100ms linear;
 `;
 
-export const Thumb = styled.img`
+export const Thumb = styled.iframe`
   width: 100%;
+  height: 300px;
   transition: filter 100ms linear;
 `;
 

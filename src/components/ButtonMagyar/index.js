@@ -29,7 +29,7 @@ const ButtonMagyar = styled.button`
   }
 
   &::after {
-    content: '${({ children }) => children}';
+    content: '${({ children }) => children}'; 
     position: absolute;
   } 
 
@@ -41,6 +41,9 @@ const ButtonMagyar = styled.button`
     transform: scale(2);
   }
 
+  /* @media(max-width: 800px){
+    padding-top: 5px;
+  } */
 `;
 
 export default ButtonMagyar;

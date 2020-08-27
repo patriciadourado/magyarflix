@@ -1,15 +1,8 @@
 import React from "react";
 import HeaderOpen from "./components/HeaderOpen";
-import {
-  WrapperBanner,
-  BannerMagyar,
-  Text,
-  Watch,
-} from "./components/BannerMagyar";
+import BannerMagyar from "./components/BannerMagyar";
 import TagMagyar from "./components/TagMagyar";
-import TitleMagyar from "./components/TitleMagyar";
 import DescriptionMagyar from "./components/DescriptionMagyar";
-import ThumbMagyar from "./components/ThumbMagyar";
 import bestOf from "./assets/img/best-of-buda.png";
 import steve from "./assets/img/steve.jpg";
 import FooterOpen from "./components/FooterOpen";
@@ -24,7 +17,7 @@ const videos = [
     title: "Budapest: The Best of Hungary",
     channelName: "Rick Steves' Europe",
     timer: "02:20:34",
-    link: "https://www.youtube.com/watch?v=rs_w9cwJ1Fg",
+    link: "https://www.youtube.com/watch?v=-0o53Ys1HIs",
   },
   {
     src: bestOf,
@@ -132,29 +125,14 @@ function App() {
     <>
       <HeaderOpen />
 
-      <BannerMagyar>
-        <WrapperBanner backgroundImage={bestOf}>
-          <Text>
-            <TitleMagyar>Useful guide videos about Hungary</TitleMagyar>
-            <DescriptionMagyar>
-              On this Flix you can find videos about best pubs and ruin pubs,
-              cheap restaurants or places to eat, hungarian traditional foods,
-              drinks, beers, turistics places to visit in Budapest, a taste of
-              hungarian language as Chico Buarque quote once: &quot; the only
-              tongue the devil respects.&quot;
-            </DescriptionMagyar>
-          </Text>
-          <Watch>Assistir</Watch>
-          <ThumbMagyar
-            src={bestOf}
-            alt="Thumb of Steve"
-            avatar={steve}
-            title="Budapest: The Best of Hungary"
-            channelName="Rick Steves' Europe"
-            timer="02:20:34"
-          />
-        </WrapperBanner>
-      </BannerMagyar>
+      <BannerMagyar
+        bgImg={bestOf}
+        url="https://www.youtube.com/watch?v=rs_w9cwJ1Fg"
+        alt="Thumb of Steve"
+        title="Budapest: The Best of Hungary"
+        avatar={steve}
+        channelName="Rick Steves' Europe"
+      />
 
       <SectionMagyar>
         <TagMagyar>Magyar Lifestyle</TagMagyar>
