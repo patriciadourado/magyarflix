@@ -28,16 +28,28 @@ const ButtonMagyar = styled.button`
   }
 
   &::after {
-    content: '${({ children }) => children}'; 
+    /* content: '${({ children }) => children}';  */
     position: absolute;
+
   } 
 
   &:hover::before {     
     transform: translateX(-30%) scaleX(1.5) skew(-30deg);
   }
 
+  &:hover::after {     
+    content: '${({ children }) => children}';  
+    color: var(--color-black-medium);
+  }
+
   &:active::after{
     transform: scale(2);
+  }
+  
+  @media(max-width: 800px){
+    &::before {
+      transition: transform 50ms linear;
+    }
   }
 `;
 
