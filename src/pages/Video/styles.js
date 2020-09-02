@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import TagMagyar from "../../components/TagMagyar";
 
-const VideoWrapper = styled.div`
+const VideoWrapper = styled.section`
   justify-content: center;
   display: flex;
 
@@ -10,6 +10,7 @@ const VideoWrapper = styled.div`
     font-size: 35rem;
     padding-top: 8rem;
     padding-bottom: 8rem;
+    margin-bottom: 20rem;
   }
 
   @media (max-width: 800px) {

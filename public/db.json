@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Food",
+      "cor": "#6BD1FF",
+      "link_extra": {
+        "text": "Little Secrets of Budapest",
+        "url": "https://www.youtube.com/watch?v=S8HSwsRob8I"
+      }
+    }
+   ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "title": "Geography Now",
+      "url": "https://www.youtube.com/watch?v=omx66rFK5yM"
+    }
+  ]
+}

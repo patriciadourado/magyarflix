@@ -32,8 +32,8 @@ function Home() {
           you can taste a little bit through this Flix;
         </DescriptionMagyar>
         <CarouselMagyar category={initialData.categories[0]} />
-        <CarouselMagyar category={initialData.categories[1]} />
-        <CarouselMagyar category={initialData.categories[2]} />
+        {/* <CarouselMagyar category={initialData.categories[1]} />
+        <CarouselMagyar category={initialData.categories[2]} /> */}
       </SectionMagyar>
 
       <FooterOpen />
