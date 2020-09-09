@@ -19,7 +19,16 @@ function getYouTubeId(youtubeURL) {
   );
 }
 
-function BannerMagyar({ bgImg, url, alt, title, channelName, avatar }) {
+function BannerMagyar({
+  bgImg,
+  url,
+  alt,
+  title,
+  channelName,
+  avatar,
+  titleM,
+  description,
+}) {
   const youTubeID = getYouTubeId(url);
   const [VideoVisibility, setVideoVisibility] = useState(true);
 
@@ -31,14 +40,8 @@ function BannerMagyar({ bgImg, url, alt, title, channelName, avatar }) {
     <BannerStyle>
       <WrapperBanner bgImg={bgImg} title={title} isVisible={VideoVisibility}>
         <Text>
-          <TitleMagyar>Useful guide videos about Hungary</TitleMagyar>
-          <DescriptionMagyar>
-            On this Flix you can find videos about best pubs and ruin pubs,
-            cheap restaurants or places to eat, hungarian traditional foods,
-            drinks, beers, turistics places to visit in Budapest, a taste of
-            hungarian language as Chico Buarque quote once: &quot; the only
-            tongue the devil respects.&quot;
-          </DescriptionMagyar>
+          <TitleMagyar>{titleM}</TitleMagyar>
+          <DescriptionMagyar>{description}</DescriptionMagyar>
         </Text>
         <Watch onClick={ToggleVideoVisibility}>Watch it</Watch>
         <ThumbMagyar
@@ -70,6 +73,8 @@ BannerMagyar.propTypes = {
   title: PropTypes.string.isRequired,
   channelName: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  titleM: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default BannerMagyar;

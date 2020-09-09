@@ -22,6 +22,12 @@ function Home() {
         title="Budapest: The Best of Hungary"
         avatar={steve}
         channelName="Rick Steves' Europe"
+        titleM="Useful guide videos about Hungary"
+        description="On this Flix you can find videos about best pubs and ruin pubs,
+        cheap restaurants or places to eat, hungarian traditional foods,
+        drinks, beers, turistics places to visit in Budapest, a taste of
+        hungarian language as Chico Buarque quote once: &quot; the only
+        tongue the devil respects.&quot;"
       />
 
       <SectionMagyar>

@@ -21,6 +21,7 @@ function CarouselMagyar({ category }) {
   const [wrapperWidth, setWrapperWidth] = useState(0);
   const winWidth = useWindowWidth();
   const $wrapper = useRef(null);
+
   useEffect(
     () => setWrapperWidth($wrapper.current.getBoundingClientRect().width),
     []
@@ -66,13 +67,24 @@ function CarouselMagyar({ category }) {
   );
 }
 
-const typeVideo = {
+/* const typeVideo = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };
 
 CarouselMagyar.propTypes = {
   category: PropTypes.arrayOf(PropTypes.shape(typeVideo)).isRequired,
-};
+}; */
+
+CarouselMagyar.propTypes = PropTypes.shape({
+  categories: PropTypes.arrayOf(PropTypes.shape({
+    color: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    videos: PropTypes.arrayOf(PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    }).isRequired).isRequired
+  }).isRequired).isRequired
+}).isRequired
 
 export default CarouselMagyar;

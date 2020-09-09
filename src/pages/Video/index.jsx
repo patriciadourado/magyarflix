@@ -1,44 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TagMagyar from "../../components/TagMagyar";
 import HeaderOpen from "../../components/HeaderOpen";
 import VideoWrapper from "./styles";
 import FooterOpen from "../../components/FooterOpen";
 import FormField from "../../components/FormField";
 import ButtonMagyar from "../../components/ButtonMagyar";
+import Data from "../../data/initial_data.json";
+import { Category, FormMagyar } from "./Category";
+import useForm from "./useForm";
 
 function Video() {
-  const initialValues = {
-    name: "",
+  const { handleChange, values } = useForm({
     description: "",
-    color: "",
-  };
-  const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(initialValues);
-
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value,
-    });
-  }
-
-  function handleChange(infoOfEvent) {
-    setValue(infoOfEvent.target.getAttribute("name"), infoOfEvent.target.value);
-  }
-
-  useEffect(() => {
-    if (window.location.href.includes("localhost")) {
-      const URL = "http://localhost:3000/categories";
-      fetch(URL).then(async (responseOfServer) => {
-        if (responseOfServer.ok) {
-          const response = await responseOfServer.json();
-          setCategories(response);
-          return;
-        }
-        throw new Error("Impossible Get Data!");
-      });
+    url: "",
+  });
+  
+  /*
+  function matchYoutubeUrl(url) {
+    const p = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    if (url.match(p)) {
+      return url.match(p)[1];
     }
-  }, []);
+    return false;
+  }*/
+
+  function underConstruction() {
+    alert("This Area is Under Construction! Return later! :)");
+  }
 
   return (
     <>
@@ -47,41 +35,36 @@ function Video() {
         <TagMagyar>Contributing Area</TagMagyar>
       </VideoWrapper>
 
-      <form
-        onSubmit={function handleSubmit(infoOfEvent) {
-          infoOfEvent.preventDefault();
-
-          setCategories([...categories, values]);
-
-          setValues(initialValues);
-        }}
-      >
-        <FormField
-          label="Name of Category"
-          type="text"
-          name="name"
-          value={values.name}
-          onChange={handleChange}
-        />
+      <FormMagyar onSubmit={handleChange}>
+        <Category>
+          {Data.categories.map((category) => {
+            return (
+              <option key={category.title} value={category.title}>
+                {category.title}
+              </option>
+            );
+          })}
+        </Category>
 
         <FormField
-          label="Description"
+          label="Video Description"
           type="text"
           name="description"
           value={values.description}
           onChange={handleChange}
         />
         <FormField
-          label="Color"
-          type="color"
-          name="color"
-          value={values.color}
+          label="Video URL"
+          type="text"
+          name="url"
+          value={values.url}
           onChange={handleChange}
         />
-      </form>
+      </FormMagyar>
       {/* <ButtonMagyar as="a" href="/" type="submit"> */}
       <ButtonMagyar
         type="submit"
+        onClick={() => underConstruction()}
         style={{
           fontSize: "15rem",
           width: "100px",
@@ -93,13 +76,6 @@ function Video() {
       >
         Register
       </ButtonMagyar>
-
-      <ul>
-        {categories.map((category) => (
-          <li key={`${category.id}`}>{category.title}</li>
-        ))}
-      </ul>
-
       <FooterOpen />
     </>
   );

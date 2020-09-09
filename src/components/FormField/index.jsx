@@ -7,9 +7,6 @@ const FormFieldWrapper = styled.div`
   textarea {
     min-height: 150px;
   }
-  input[type="color"] {
-    padding-left: 66px;
-  }
 `;
 
 const Label = styled.label``;
@@ -59,20 +56,18 @@ const Input = styled.input`
   &:focus {
     border-bottom-color: var(--color-primary-medium);
   }
-  &:focus:not([type="color"]) + ${Label.Text} {
-    transform: scale(0.6) translateY(-10px);
+  &:focus:not([type='color']) + ${Label.Text} {
+    transform: scale(.6) translateY(-10px);
   }
   ${({ value }) => {
     const hasValue = value.length > 0;
-    return (
-      hasValue &&
-      css`
-        &:not([type="color"]) + ${Label.Text} {
-          transform: scale(0.6) translateY(-10px);
+    return hasValue && css`
+        &:not([type='color']) + ${Label.Text} {
+          transform: scale(.6) translateY(-10px);
         }
-      `
-    );
-  }}
+      `;
+  }
+}
 `;
 
 function FormField({ label, type, name, value, onChange }) {
