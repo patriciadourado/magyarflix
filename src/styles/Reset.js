@@ -1,8 +1,11 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+import { createGlobalStyle } from 'styled-components';
 
+
+const Reset = createGlobalStyle`
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
 html,
 body,
 div,
@@ -148,3 +151,6 @@ body {
 * {
   box-sizing: border-box;
 }
+`;
+
+export default Reset;

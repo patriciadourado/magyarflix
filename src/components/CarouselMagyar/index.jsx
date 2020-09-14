@@ -77,14 +77,18 @@ CarouselMagyar.propTypes = {
 }; */
 
 CarouselMagyar.propTypes = PropTypes.shape({
-  categories: PropTypes.arrayOf(PropTypes.shape({
-    color: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    videos: PropTypes.arrayOf(PropTypes.shape({
-      link: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    }).isRequired).isRequired
-  }).isRequired).isRequired
-}).isRequired
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      color: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      videos: PropTypes.arrayOf(
+        PropTypes.shape({
+          link: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }).isRequired
+  ).isRequired,
+}).isRequired;
 
 export default CarouselMagyar;

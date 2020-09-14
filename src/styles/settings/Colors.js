@@ -1,4 +1,7 @@
-:root {
+import {createGlobalStyle} from 'styled-components';
+
+const Colors = createGlobalStyle`
+  :root {
   --color-fiery-rose: #f25a70;
   --color-primary-medium: #ee3f3f;
   --color-very-green: #009b14;
@@ -30,3 +33,6 @@
     #009b14
   );
 }
+`;
+
+export default Colors;

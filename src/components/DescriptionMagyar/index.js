@@ -7,10 +7,6 @@ const DescriptionMagyar = styled.p`
   text-align: justify;
   line-height: 1.2em;
   text-justify: center;
-
-  @media (max-width: 800px){
-    /* display: none; */
-  }
 `;
 
 export default DescriptionMagyar;

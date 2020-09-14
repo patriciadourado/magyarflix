@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import "./styles/settings/colors.css";
-import "./styles/reset.css";
+import Colors from "./styles/settings/Colors";
+import Reset from "./styles/Reset";
 import Video from "./pages/Video";
 import Home from "./pages/Home";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Colors />
+    <Reset />
+
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
