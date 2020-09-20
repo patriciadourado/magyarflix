@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const Colors = createGlobalStyle`
   :root {
@@ -11,7 +11,7 @@ const Colors = createGlobalStyle`
   --color-gray-light: #f5f5f5;
   --color-pomp-and-power: #7c5e99;
   --color-blue-baby: #6bd1ff;
-  --color-marketing: #6b5be2;
+  --color-news: #6b5be2;
   --color-yellow: #ffba05;
   --color-cane: #9cd33b;
   --color-orange: #ff8c2a;

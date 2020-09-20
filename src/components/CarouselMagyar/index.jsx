@@ -37,7 +37,14 @@ function CarouselMagyar({ category }) {
 
   return (
     <>
-      <TagMagyar small style={{ backgroundColor: categoryColor }}>
+      <TagMagyar
+        small
+        style={{
+          backgroundColor: categoryColor,
+          marginBottom: "20rem",
+          marginTop: "20rem",
+        }}
+      >
         {categoryTitle}
       </TagMagyar>
       <CarouselStyle move={move} moveLastRight={wrapperWidth - winWidth}>
