@@ -36,7 +36,8 @@ export const Thumb = styled.iframe`
 export const WrapperThumb = styled.figure`
   position: relative;
   border-radius: 4px;
-  border: var(--border) solid var(--color-magyar);
+  border: var(--border) solid
+    ${({ categoryColor }) => categoryColor || "#009b14"};
   width: 550px;
   overflow: hidden;
   cursor: pointer;
@@ -61,7 +62,7 @@ export const Background = styled.div`
   margin-right: 5%;
   position: relative;
 
-  background-color: var(--color-magyar);
+  background-color: ${({ categoryColor }) => categoryColor || "#009b14"};
 
   @media (max-width: 800px) {
     margin-bottom: 15rem;
@@ -80,7 +81,8 @@ export const Background = styled.div`
     position: absolute;
     width: calc(var(--space) * 1.4);
     height: calc(var(--space) * 1.4);
-    background-color: var(--color-magyar);
+
+    background-color: ${({ categoryColor }) => categoryColor || "#009b14"};
     transition: transform 100ms linear;
   }
 

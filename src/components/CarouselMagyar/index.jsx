@@ -60,6 +60,7 @@ function CarouselMagyar({ category }) {
               avatar="null"
               title={title}
               channelName="null"
+              categoryColor={categoryColor}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             />

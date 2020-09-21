@@ -50,6 +50,7 @@ function BannerMagyar({
           avatar={avatar}
           title={title}
           channelName={channelName}
+          categoryColor="#009b14"
           frameBorder="0"
           allow="accelerometer; fullscreen; autoplay; encrypted-media; gyroscope; picture-in-picture"
         />
