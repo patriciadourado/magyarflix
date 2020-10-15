@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import initialData from "../../data/initial_data.json";
 import HeaderOpen from "../../components/HeaderOpen";
 import BannerMagyar from "../../components/BannerMagyar";
@@ -9,11 +9,26 @@ import steve from "../../assets/img/steve.jpg";
 import FooterOpen from "../../components/FooterOpen";
 import SectionMagyar from "../../components/SectionMagyar";
 import CarouselMagyar from "../../components/CarouselMagyar";
+import Loader from "../../components/Loader";
 
 function Home() {
+  const [isLoading, setLoading] = useState(true);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 10000);
+
   return (
     <>
       <HeaderOpen name="New Video" route="video/new" />
+
+      {isLoading && (
+        <div>
+          <Loader />
+          {' '}
+          <FooterOpen />
+        </div>
+      )}
 
       <BannerMagyar
         bgImg={bestOf}
@@ -23,11 +38,11 @@ function Home() {
         avatar={steve}
         channelName="Rick Steves' Europe"
         titleM="Useful guide videos about Hungary"
-        description="On this Flix you can find videos about best pubs and ruin pubs,
+        description='On this Flix you can find videos about best pubs and ruin pubs,
         cheap restaurants or places to eat, hungarian traditional foods,
         drinks, beers, turistics places to visit in Budapest, a taste of
-        hungarian language as Chico Buarque quote once: &quot; the only
-        tongue the devil respects.&quot;"
+        hungarian language as Chico Buarque quote once: " the only
+        tongue the devil respects."'
       />
 
       <SectionMagyar>

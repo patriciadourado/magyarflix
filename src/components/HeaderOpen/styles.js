@@ -8,7 +8,7 @@ export const HeaderMagyar = styled.header`
   padding: 20rem 30rem;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 101;
 
   @media (max-width: 800px) {
     padding: 15rem 16rem;

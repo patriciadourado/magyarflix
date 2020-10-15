@@ -9,6 +9,7 @@ const FooterMagyar = styled.footer`
   background-color: var(--color-black-dark);
   color: var(--color-gray-light);
   padding: 20rem 0;
+  z-index: 200;
   border-top: 4px solid var(--color-primary-medium);
 
   & > ${LogoFlix} {
