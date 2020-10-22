@@ -16,7 +16,7 @@ function Home() {
 
   setTimeout(() => {
     setLoading(false);
-  }, 10000);
+  }, 7000);
 
   return (
     <>
@@ -39,10 +39,9 @@ function Home() {
         channelName="Rick Steves' Europe"
         titleM="Useful guide videos about Hungary"
         description='On this Flix you can find videos about best pubs and ruin pubs,
-        cheap restaurants or places to eat, hungarian traditional foods,
-        drinks, beers, turistics places to visit in Budapest, a taste of
-        hungarian language as Chico Buarque quote once: " the only
-        tongue the devil respects."'
+        hungarian traditional foods, drinks, beers, cities and turistics places to visit, hungarian thermals, 
+        cool activities in Budapest, curiosities and a taste of hungarian language as Chico Buarque quote once: 
+        " the only tongue the devil respects."'
       />
 
       <SectionMagyar>

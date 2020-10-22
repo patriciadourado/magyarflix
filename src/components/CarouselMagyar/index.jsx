@@ -1,9 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useWindowWidth } from "@react-hook/window-size";
 import PropTypes from "prop-types";
-import { CarouselStyle, Right, Wrapper, Left } from "./styles";
-import ThumbMagyar from "../ThumbMagyar";
+import {
+  CarouselStyle,
+  Right,
+  Wrapper,
+  Left,
+  ShowVideo,
+  ShowImage,
+} from "./styles";
 import TagMagyar from "../TagMagyar";
+import ThumbCarousel from "../ThumbCarousel";
+import ThumbMagyar from "../ThumbMagyar";
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL.replace(
@@ -21,6 +29,12 @@ function CarouselMagyar({ category }) {
   const [wrapperWidth, setWrapperWidth] = useState(0);
   const winWidth = useWindowWidth();
   const $wrapper = useRef(null);
+
+  const [VideoVisibility, setVideoVisibility] = useState(true);
+
+  function ToggleVideoVisibility() {
+    setVideoVisibility(!VideoVisibility);
+  }
 
   useEffect(
     () => setWrapperWidth($wrapper.current.getBoundingClientRect().width),
@@ -51,19 +65,45 @@ function CarouselMagyar({ category }) {
         <Left onClick={actionLeft} style={{ backgroundColor: categoryColor }} />
         <Wrapper ref={$wrapper}>
           {videos.map(({ title, link }) => (
-            <ThumbMagyar
-              key={title}
-              src={`https://www.youtube.com/embed/${getYouTubeId(
-                link
-              )}?autoplay=0`}
-              alt={title}
-              avatar="null"
-              title={title}
-              channelName="null"
-              categoryColor={categoryColor}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            />
+            <>
+              <ShowImage
+                onClick={ToggleVideoVisibility}
+                isVisible={!VideoVisibility}
+              >
+                {VideoVisibility && (
+                  <ThumbCarousel
+                    key={`https://img.youtube.com/vi/${getYouTubeId(
+                      link
+                    )}/mqdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${getYouTubeId(
+                      link
+                    )}/mqdefault.jpg`}
+                    alt={title}
+                    avatar={`https://img.youtube.com/vi/${getYouTubeId(
+                      link
+                    )}/mqdefault.jpg`}
+                    title={title}
+                    channelName={title}
+                    categoryColor={categoryColor}
+                  />
+                )}
+              </ShowImage>
+              <ShowVideo isVisible={!VideoVisibility}>
+                {!VideoVisibility && (
+                  <ThumbMagyar
+                    key={title}
+                    src={`https://www.youtube.com/embed/${getYouTubeId(
+                      link
+                    )}?autoplay=0&showinfo=0`}
+                    alt={title}
+                    avatar="null"
+                    title={title}
+                    channelName="null"
+                    categoryColor={categoryColor}
+                  />
+                )}
+              </ShowVideo>
+            </>
           ))}
         </Wrapper>
         <Right

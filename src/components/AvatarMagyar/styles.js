@@ -11,7 +11,8 @@ export const Avatar = styled.img`
   width: 50rem;
   height: 50rem;
   border-radius: 50%;
-  border: 4rem solid var(--color-magyar);
+  border: 4rem solid
+    ${({ categoryColor }) => categoryColor || "#009b14"};
   margin-right: 10rem;
 `;
 

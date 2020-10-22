@@ -2,16 +2,56 @@ import styled, { css } from "styled-components";
 import {
   WrapperThumb,
   Background,
-  Timer,
   Title,
   Thumb,
-} from "../ThumbMagyar/styles";
+} from "../ThumbCarousel/styles";
 import arrow from "../../assets/img/arrow.svg";
 import { Avatar, Channel } from "../AvatarMagyar/styles";
 
 const thumbWidth = 400;
 const spaceRight = 20;
 const spaceRightLeft = 30;
+
+export const ShowImage = styled.div`
+  align-items: center;
+  height: 100%;
+  display: ${({ isVisible }) => (isVisible ? "none" : "flex")};
+  position: relative;
+  margin-right: 15rem;
+`;
+
+export const ShowVideo = styled.div`
+  display: none;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  display: ${({ isVisible }) => (isVisible ? "block" : "none")};
+  margin-right: 15rem;
+
+  & ${Avatar} {
+    display: none;
+  }
+
+  & ${Title} {
+    display: none;
+  }
+
+  & ${Channel} {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    display: ${({ isVisible }) => (isVisible ? "block" : "none")};
+    flex-direction: column-reverse;
+    height: 100%;
+    /* min-height: 70vw; */
+    justify-content: flex-end;
+  }
+
+  & ${Thumb} {
+    height: 30vw;
+  }
+`;
 
 export const Wrapper = styled.div`
   --space-right: ${spaceRight}rem;
@@ -138,46 +178,33 @@ export const CarouselStyle = styled.div`
     }
 
     & ${Title} {
-        font-size: 3vw;
-        display: none;
-      }
+      font-size: 1.5vw;
+    }
 
-      & ${Timer} {
-        font-size: 2.5vw;
-        display: none;
-      }
+    & ${Avatar} {
+      width: 3.5vw;
+      height: 3.5vw;
+    }
 
-      & ${Avatar} {
-        width: 8vw;
-        height: 8vw;
-        display: none;
-      }
-
-      & ${Channel} {
-        font-size: 4vw;
-        display: none;
-      }
+    & ${Channel} {
+      font-size: 1.5vw;
+    }
   }
   @media (max-width: 800px) {
     & ${WrapperThumb} {
-      /* width: 70vw; */
       box-sizing: border-box;
 
       & ${Title} {
-        font-size: 3vw;
-      }
-
-      & ${Timer} {
         font-size: 2.5vw;
       }
 
       & ${Avatar} {
-        width: 8vw;
-        height: 8vw;
+        width: 7vw;
+        height: 7vw;
       }
 
       & ${Channel} {
-        font-size: 4vw;
+        font-size: 2.5vw;
       }
     }
 

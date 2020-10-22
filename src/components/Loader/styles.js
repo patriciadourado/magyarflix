@@ -10,11 +10,7 @@ const Rubikao = styled.section`
   padding-top: 100px;
   justify-content: center;
   z-index: 100;
-	/* z-index: 9999; */
-	/* background: url(${rubik}) center no-repeat var(--color-black); */
   background: url(${rubik}) var(--color-black);
-  /* border-radius: 4px;
-  border: 4rem solid var(--color-red); */
 
   & > ${DescriptionMagyar}{
     padding-top: 200rem;

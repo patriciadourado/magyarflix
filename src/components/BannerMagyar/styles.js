@@ -91,6 +91,16 @@ export const WrapperBanner = styled.section`
   display: flex;
   margin-top: 90rem;
 
+  & ${WrapperThumb} {
+    width: 550px;
+    height: 300px;
+  }
+
+  & ${Thumb} {
+    width: 550px;
+    height: 300px;
+  }
+
   @media (max-width: 800px) {
     margin-top: 70rem;
     display: ${({ isVisible }) => (isVisible ? "flex" : "none")};

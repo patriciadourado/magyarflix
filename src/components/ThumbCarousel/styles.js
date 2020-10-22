@@ -15,9 +15,9 @@ export const Title = styled.figcaption`
   transition: transform 200ms linear, opacity 100ms linear;
 `;
 
-export const Thumb = styled.iframe`
-  width: 392px;
-  height: 200px;
+export const Thumb = styled.img`
+  width: 100%;
+  height: 360px;
   transition: filter 100ms linear;
 `;
 
@@ -26,7 +26,7 @@ export const WrapperThumb = styled.figure`
   border-radius: 4px;
   border: var(--border) solid
     ${({ categoryColor }) => categoryColor || "#009b14"};
-  /* width: 550px; */
+  width: 550px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 100ms linear;
