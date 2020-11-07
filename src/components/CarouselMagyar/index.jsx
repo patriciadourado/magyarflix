@@ -59,22 +59,19 @@ function CarouselMagyar({ category }) {
           marginTop: "20rem",
         }}
       >
-        {categoryTitle}
+      {categoryTitle}
       </TagMagyar>
       <CarouselStyle move={move} moveLastRight={wrapperWidth - winWidth}>
         <Left onClick={actionLeft} style={{ backgroundColor: categoryColor }} />
         <Wrapper ref={$wrapper}>
           {videos.map(({ title, link }) => (
-            <>
+            <div key={link}>
               <ShowImage
                 onClick={ToggleVideoVisibility}
                 isVisible={!VideoVisibility}
               >
                 {VideoVisibility && (
                   <ThumbCarousel
-                    key={`https://img.youtube.com/vi/${getYouTubeId(
-                      link
-                    )}/mqdefault.jpg`}
                     src={`https://img.youtube.com/vi/${getYouTubeId(
                       link
                     )}/mqdefault.jpg`}
@@ -91,7 +88,6 @@ function CarouselMagyar({ category }) {
               <ShowVideo isVisible={!VideoVisibility}>
                 {!VideoVisibility && (
                   <ThumbMagyar
-                    key={title}
                     src={`https://www.youtube.com/embed/${getYouTubeId(
                       link
                     )}?autoplay=0&showinfo=0`}
@@ -103,7 +99,7 @@ function CarouselMagyar({ category }) {
                   />
                 )}
               </ShowVideo>
-            </>
+            </div>
           ))}
         </Wrapper>
         <Right

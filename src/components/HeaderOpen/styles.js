@@ -12,6 +12,7 @@ export const HeaderMagyar = styled.header`
 
   @media (max-width: 800px) {
     padding: 15rem 16rem;
+    max-height: 70px;
   }
 `;
 
