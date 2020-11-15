@@ -9,7 +9,7 @@ function Meta() {
       <title>MagyarFlix</title>
       <meta
         name="description"
-        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, turistics places, activities, curiosities, thermals and more."
+        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, touristic places, activities, curiosities, thermals and more."
       />
 
       {/* <!-- Google / Search Engine Tags --> */}
@@ -19,7 +19,7 @@ function Meta() {
       />
       <meta
         itemProp="description"
-        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, turistics places, activities, curiosities, thermals and more."
+        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, touristic places, activities, curiosities, thermals and more."
       />
       <meta itemProp="image" content={logo} />
 
@@ -35,7 +35,7 @@ function Meta() {
       />
       <meta
         property="og:description"
-        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, turistics places, activities, curiosities, thermals and more."
+        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, touristic places, activities, curiosities, thermals and more."
       />
       <meta property="og:image" content={logo} />
 
@@ -47,7 +47,7 @@ function Meta() {
       />
       <meta
         name="twitter:description"
-        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, turistics places, activities, curiosities, thermals and more."
+        content="Useful guide videos about Hungary: ruin pubs, traditional foods, drinks, touristic places, activities, curiosities, thermals and more."
       />
       <meta name="twitter:image" content={logo} />
     </Helmet>
