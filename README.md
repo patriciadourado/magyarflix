@@ -1,7 +1,7 @@
 ## About The Project
 
 MagyarFlix is your video gallery about Hungary; Here you can find useful guide videos about ruin pubs, 
-traditional foods, drinks, turistics places, activities, curiosities, thermals and more.
+traditional foods, drinks, touristic places, activities, curiosities, thermals and more.
 
 ![](/src/assets/img/MagyarFlix.png)
 
