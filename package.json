@@ -2,7 +2,7 @@
   "name": "magyarflix",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://patriciadourado.github.io/magyarflix",
+  "homepage": "http://patriciadourado.github.io/magyarflix",
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
     "@testing-library/jest-dom": "^4.2.4",
