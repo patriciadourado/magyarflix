@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc98494b8e743d834aeb4b0733c5ca9b",
+    "revision": "9982b2984987b3ba21ae562852a3a7ac",
     "url": "/magyarflix/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/magyarflix/static/js/2.6cf78802.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "56f7f697757363f95194",
-    "url": "/magyarflix/static/js/main.5c8ddc33.chunk.js"
+    "revision": "c7dbe5b95263642b1caa",
+    "url": "/magyarflix/static/js/main.c4c2c702.chunk.js"
   },
   {
     "revision": "be035d40e9289f8cc4c2",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/magyarflix/static/media/MagyarFlix.3669c205.png"
   },
   {
-    "revision": "4274f57d99cab4cbe185f9768a72ed2c",
-    "url": "/magyarflix/static/media/arrow.4274f57d.svg"
+    "revision": "9f8571d5f3621968fedac16b4735098f",
+    "url": "/magyarflix/static/media/arrow.9f8571d5.svg"
   },
   {
     "revision": "4abc4fb1836e92c74b83f9f835b3c031",
