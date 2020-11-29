@@ -12,7 +12,7 @@ ReactDOM.render(
     <Colors />
     <Reset />
 
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/video/new" exact component={Video} />
