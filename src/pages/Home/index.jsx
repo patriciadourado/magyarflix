@@ -10,7 +10,6 @@ import FooterOpen from "../../components/FooterOpen";
 import SectionMagyar from "../../components/SectionMagyar";
 import CarouselMagyar from "../../components/CarouselMagyar";
 import Loader from "../../components/Loader";
-import Meta from "../../components/Meta";
 
 function Home() {
   const [isLoading, setLoading] = useState(true);
@@ -21,7 +20,6 @@ function Home() {
 
   return (
     <>
-      <Meta />
       <HeaderOpen name="New Video" route="video/new" />
 
       {isLoading && (
