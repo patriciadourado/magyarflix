@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9b954339f590e5548fb9fd06068257a",
+    "revision": "d6782f66e4493d49e369f168d53140ec",
     "url": "/magyarflix/index.html"
   },
   {
-    "revision": "c1d48abfeadb760eb75e",
-    "url": "/magyarflix/static/js/2.c6e6276a.chunk.js"
+    "revision": "6fe97a61336868917c36",
+    "url": "/magyarflix/static/js/2.94b2fa32.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/magyarflix/static/js/2.c6e6276a.chunk.js.LICENSE.txt"
+    "url": "/magyarflix/static/js/2.94b2fa32.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5834d2c96a86dfe5ae1f",
-    "url": "/magyarflix/static/js/main.fda9fb7a.chunk.js"
+    "revision": "74cf95074ea8ed9acef8",
+    "url": "/magyarflix/static/js/main.bd576ebd.chunk.js"
   },
   {
     "revision": "be035d40e9289f8cc4c2",
