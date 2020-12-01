@@ -15,11 +15,7 @@ ReactDOM.render(
     <HashRouter basename={`${process.env.PUBLIC_URL}`}>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route
-          path={`${process.env.PUBLIC_URL}/video/new`}
-          exact
-          component={Video}
-        />
+        <Route path="/video/new" exact component={Video} />
       </Switch>
     </HashRouter>
   </React.StrictMode>,
