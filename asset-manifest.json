@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/magyarflix/static/js/main.513c0cf4.chunk.js",
-    "main.js.map": "/magyarflix/static/js/main.513c0cf4.chunk.js.map",
+    "main.js": "/magyarflix/static/js/main.a073a41d.chunk.js",
+    "main.js.map": "/magyarflix/static/js/main.a073a41d.chunk.js.map",
     "runtime-main.js": "/magyarflix/static/js/runtime-main.cecaf8bd.js",
     "runtime-main.js.map": "/magyarflix/static/js/runtime-main.cecaf8bd.js.map",
-    "static/js/2.6cf78802.chunk.js": "/magyarflix/static/js/2.6cf78802.chunk.js",
-    "static/js/2.6cf78802.chunk.js.map": "/magyarflix/static/js/2.6cf78802.chunk.js.map",
+    "static/js/2.c6e6276a.chunk.js": "/magyarflix/static/js/2.c6e6276a.chunk.js",
+    "static/js/2.c6e6276a.chunk.js.map": "/magyarflix/static/js/2.c6e6276a.chunk.js.map",
     "index.html": "/magyarflix/index.html",
-    "precache-manifest.1282c96b4be519387e0d9d57fdaa636a.js": "/magyarflix/precache-manifest.1282c96b4be519387e0d9d57fdaa636a.js",
+    "precache-manifest.96ecb326aa011384fab9c5771dfc83d2.js": "/magyarflix/precache-manifest.96ecb326aa011384fab9c5771dfc83d2.js",
     "service-worker.js": "/magyarflix/service-worker.js",
-    "static/js/2.6cf78802.chunk.js.LICENSE.txt": "/magyarflix/static/js/2.6cf78802.chunk.js.LICENSE.txt",
+    "static/js/2.c6e6276a.chunk.js.LICENSE.txt": "/magyarflix/static/js/2.c6e6276a.chunk.js.LICENSE.txt",
     "static/media/MagyarFlix.png": "/magyarflix/static/media/MagyarFlix.3669c205.png",
     "static/media/arrow.svg": "/magyarflix/static/media/arrow.9f8571d5.svg",
     "static/media/best-of-buda.png": "/magyarflix/static/media/best-of-buda.4abc4fb1.png",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cecaf8bd.js",
-    "static/js/2.6cf78802.chunk.js",
-    "static/js/main.513c0cf4.chunk.js"
+    "static/js/2.c6e6276a.chunk.js",
+    "static/js/main.a073a41d.chunk.js"
   ]
 }
