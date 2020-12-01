@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/magyarflix/static/js/main.5f74868c.chunk.js",
-    "main.js.map": "/magyarflix/static/js/main.5f74868c.chunk.js.map",
+    "main.js": "/magyarflix/static/js/main.68fe7918.chunk.js",
+    "main.js.map": "/magyarflix/static/js/main.68fe7918.chunk.js.map",
     "runtime-main.js": "/magyarflix/static/js/runtime-main.cecaf8bd.js",
     "runtime-main.js.map": "/magyarflix/static/js/runtime-main.cecaf8bd.js.map",
     "static/js/2.94b2fa32.chunk.js": "/magyarflix/static/js/2.94b2fa32.chunk.js",
     "static/js/2.94b2fa32.chunk.js.map": "/magyarflix/static/js/2.94b2fa32.chunk.js.map",
     "index.html": "/magyarflix/index.html",
-    "precache-manifest.8901eea480af8398290175fd151bc2e9.js": "/magyarflix/precache-manifest.8901eea480af8398290175fd151bc2e9.js",
+    "precache-manifest.6331f162addae53f79d729ed6ea3117d.js": "/magyarflix/precache-manifest.6331f162addae53f79d729ed6ea3117d.js",
     "service-worker.js": "/magyarflix/service-worker.js",
     "static/js/2.94b2fa32.chunk.js.LICENSE.txt": "/magyarflix/static/js/2.94b2fa32.chunk.js.LICENSE.txt",
     "static/media/MagyarFlix.png": "/magyarflix/static/media/MagyarFlix.3669c205.png",
@@ -18,6 +18,6 @@
   "entrypoints": [
     "static/js/runtime-main.cecaf8bd.js",
     "static/js/2.94b2fa32.chunk.js",
-    "static/js/main.5f74868c.chunk.js"
+    "static/js/main.68fe7918.chunk.js"
   ]
 }
