@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 import Colors from "./styles/settings/Colors";
 import Reset from "./styles/Reset";
@@ -12,11 +12,9 @@ ReactDOM.render(
     <Colors />
     <Reset />
 
-    <HashRouter basename={`${process.env.PUBLIC_URL}`}>
-      <Switch>
+    <HashRouter>
         <Route path="/" exact component={Home} />
         <Route path="/video/new" exact component={Video} />
-      </Switch>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
