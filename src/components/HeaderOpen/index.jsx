@@ -12,9 +12,12 @@ function HeaderOpen({ name, route }) {
         <Link to="/">
           <LogoFlix />
         </Link>
-        <ButtonMagyar as="a" href={route}>
-          {name}
-        </ButtonMagyar>
+
+        <Link to={route}>
+          <ButtonMagyar>
+            {name}
+          </ButtonMagyar>
+        </Link>
       </Wrapper>
     </HeaderMagyar>
   );

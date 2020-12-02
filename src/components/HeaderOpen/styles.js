@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
       height: 35px;
     }
 
-    & > ${ButtonMagyar} {
+    & ${ButtonMagyar} {
       background-color: var(--color-primary-medium);
       border-radius: 0;
       border: 0;
