@@ -13,10 +13,8 @@ function HeaderOpen({ name, route }) {
           <LogoFlix />
         </Link>
 
-        <Link to={route}>
-          <ButtonMagyar>
-            {name}
-          </ButtonMagyar>
+        <Link to={route} style={{ textDecoration: "none" }}>
+          <ButtonMagyar>{name}</ButtonMagyar>
         </Link>
       </Wrapper>
     </HeaderMagyar>
