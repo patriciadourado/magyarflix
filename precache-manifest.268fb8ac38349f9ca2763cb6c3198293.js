@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97cde08b4dd3d8a8f234647a7621829b",
+    "revision": "41d9e142f4f6ea453ceb907fd5b92726",
     "url": "/magyarflix/index.html"
   },
   {

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/magyarflix/precache-manifest.2b38b3d24dec991bc9805680746e5311.js"
+  "/magyarflix/precache-manifest.268fb8ac38349f9ca2763cb6c3198293.js"
 );
 
 self.addEventListener('message', (event) => {
